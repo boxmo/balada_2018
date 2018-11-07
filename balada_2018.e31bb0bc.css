@@ -6528,7 +6528,9 @@ nav.navbar {
 
 #credit {
   background-color: #1f1e25;
-  color: white; }
+  color: white;
+  font-size: 14px;
+  padding: 10px 0; }
   #credit a {
     color: white;
     font-weight: bold; }
