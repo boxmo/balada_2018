@@ -6498,6 +6498,17 @@ nav.navbar {
   #social .nav a.nav-link {
     padding-left: 0;
     color: #b3b3b3; }
+  #social .video-wraper {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0; }
+    #social .video-wraper iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute; }
 
 #divider1 {
   background-image: url("marcelino.ffc62c1c.jpg"); }
