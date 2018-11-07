@@ -6330,6 +6330,18 @@ h1, h2, h3, h4, h5, h6 {
 .text-shadow {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); }
 
+nav.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 1rem; }
+  nav.navbar a {
+    color: #b3b3b3; }
+    nav.navbar a.navbar-brand {
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+      color: #c59a52; }
+    nav.navbar a.active {
+      border-bottom: 2px solid #c59a52; }
+
 .nav-pills .nav-item {
   margin-right: 8px; }
   .nav-pills .nav-item:last-child {
@@ -6374,7 +6386,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #cover {
   background-color: black;
-  background-image: url("capa_site.f8895e13.jpg");
+  background-image: url("capa_site_2.fd41299c.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }

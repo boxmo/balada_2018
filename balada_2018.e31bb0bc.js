@@ -180,7 +180,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/capa_site.jpg":[["capa_site.f8895e13.jpg","assets/img/capa_site.jpg"],"assets/img/capa_site.jpg"],"./../img/equipe/1.jpg":[["1.67a70f4d.jpg","assets/img/equipe/1.jpg"],"assets/img/equipe/1.jpg"],"./../img/bgs/marcelino.jpg":[["marcelino.ffc62c1c.jpg","assets/img/bgs/marcelino.jpg"],"assets/img/bgs/marcelino.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/process/browser.js":[function(require,module,exports) {
+},{"./../img/capa_site_2.jpg":[["capa_site_2.fd41299c.jpg","assets/img/capa_site_2.jpg"],"assets/img/capa_site_2.jpg"],"./../img/equipe/1.jpg":[["1.67a70f4d.jpg","assets/img/equipe/1.jpg"],"assets/img/equipe/1.jpg"],"./../img/bgs/marcelino.jpg":[["marcelino.ffc62c1c.jpg","assets/img/bgs/marcelino.jpg"],"assets/img/bgs/marcelino.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -17395,6 +17395,12 @@ _jquery.default.fn.fullclip = _fullclip.default;
   (0, _jquery.default)("#divider2").fullclip({
     images: _equipe.default.secondBgs,
     wait: 6000
+  });
+  (0, _jquery.default)(".navbar-nav li a").on("click", function (e) {
+    var anchor = (0, _jquery.default)(this).attr("href");
+    (0, _jquery.default)([document.documentElement, document.body]).animate({
+      scrollTop: (0, _jquery.default)(anchor).offset().top - 40
+    }, 500);
   }); //const monthDay = new Date().getDate();
   // const dayTrigger = $("#schedule-day-nav li").find(`[data-day="${monthDay}"]`);
   // console.log(dayTrigger);
@@ -17426,7 +17432,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37529" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45337" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
