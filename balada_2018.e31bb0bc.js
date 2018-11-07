@@ -17299,6 +17299,8 @@ module.exports = "/5.dc4582a2.jpg";
 module.exports = "/6.80a20785.jpg";
 },{}],"assets/img/equipe/7.jpg":[function(require,module,exports) {
 module.exports = "/7.3c35dd6c.jpg";
+},{}],"assets/img/equipe/8.jpg":[function(require,module,exports) {
+module.exports = "/8.df274fcb.jpg";
 },{}],"assets/img/bgs/2.jpg":[function(require,module,exports) {
 module.exports = "/2.87ab2207.jpg";
 },{}],"assets/img/bgs/3.jpg":[function(require,module,exports) {
@@ -17335,31 +17337,33 @@ var _6 = _interopRequireDefault(require("./equipe/6.jpg"));
 
 var _7 = _interopRequireDefault(require("./equipe/7.jpg"));
 
+var _8 = _interopRequireDefault(require("./equipe/8.jpg"));
+
 var _marcelino = _interopRequireDefault(require("./bgs/marcelino.jpg"));
 
-var _8 = _interopRequireDefault(require("./bgs/2.jpg"));
+var _9 = _interopRequireDefault(require("./bgs/2.jpg"));
 
-var _9 = _interopRequireDefault(require("./bgs/3.jpg"));
+var _10 = _interopRequireDefault(require("./bgs/3.jpg"));
 
-var _10 = _interopRequireDefault(require("./bgs/4.jpg"));
+var _11 = _interopRequireDefault(require("./bgs/4.jpg"));
 
-var _11 = _interopRequireDefault(require("./bgs/5.jpg"));
+var _12 = _interopRequireDefault(require("./bgs/5.jpg"));
 
-var _12 = _interopRequireDefault(require("./bgs/6.jpg"));
+var _13 = _interopRequireDefault(require("./bgs/6.jpg"));
 
-var _13 = _interopRequireDefault(require("./bgs/7.jpg"));
+var _14 = _interopRequireDefault(require("./bgs/7.jpg"));
 
-var _14 = _interopRequireDefault(require("./bgs/8.jpg"));
+var _15 = _interopRequireDefault(require("./bgs/8.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = {
-  imgs: [_2.default, _.default, _3.default, _4.default, _5.default, _6.default, _7.default],
-  firstBgs: [_marcelino.default, _8.default, _9.default, _10.default],
-  secondBgs: [_11.default, _12.default, _13.default, _14.default]
+  imgs: [_2.default, _.default, _8.default, _3.default, _4.default, _5.default, _6.default, _7.default],
+  firstBgs: [_marcelino.default, _9.default, _10.default, _11.default],
+  secondBgs: [_12.default, _13.default, _14.default, _15.default]
 };
 exports.default = _default;
-},{"./equipe/1.jpg":"assets/img/equipe/1.jpg","./equipe/2.jpg":"assets/img/equipe/2.jpg","./equipe/3.jpg":"assets/img/equipe/3.jpg","./equipe/4.jpg":"assets/img/equipe/4.jpg","./equipe/5.jpg":"assets/img/equipe/5.jpg","./equipe/6.jpg":"assets/img/equipe/6.jpg","./equipe/7.jpg":"assets/img/equipe/7.jpg","./bgs/marcelino.jpg":"assets/img/bgs/marcelino.jpg","./bgs/2.jpg":"assets/img/bgs/2.jpg","./bgs/3.jpg":"assets/img/bgs/3.jpg","./bgs/4.jpg":"assets/img/bgs/4.jpg","./bgs/5.jpg":"assets/img/bgs/5.jpg","./bgs/6.jpg":"assets/img/bgs/6.jpg","./bgs/7.jpg":"assets/img/bgs/7.jpg","./bgs/8.jpg":"assets/img/bgs/8.jpg"}],"index.js":[function(require,module,exports) {
+},{"./equipe/1.jpg":"assets/img/equipe/1.jpg","./equipe/2.jpg":"assets/img/equipe/2.jpg","./equipe/3.jpg":"assets/img/equipe/3.jpg","./equipe/4.jpg":"assets/img/equipe/4.jpg","./equipe/5.jpg":"assets/img/equipe/5.jpg","./equipe/6.jpg":"assets/img/equipe/6.jpg","./equipe/7.jpg":"assets/img/equipe/7.jpg","./equipe/8.jpg":"assets/img/equipe/8.jpg","./bgs/marcelino.jpg":"assets/img/bgs/marcelino.jpg","./bgs/2.jpg":"assets/img/bgs/2.jpg","./bgs/3.jpg":"assets/img/bgs/3.jpg","./bgs/4.jpg":"assets/img/bgs/4.jpg","./bgs/5.jpg":"assets/img/bgs/5.jpg","./bgs/6.jpg":"assets/img/bgs/6.jpg","./bgs/7.jpg":"assets/img/bgs/7.jpg","./bgs/8.jpg":"assets/img/bgs/8.jpg"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./assets/css/layout.sass");
@@ -17432,7 +17436,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36333" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33781" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

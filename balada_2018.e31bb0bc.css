@@ -6525,3 +6525,10 @@ nav.navbar {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); }
+
+#credit {
+  background-color: #1f1e25;
+  color: white; }
+  #credit a {
+    color: white;
+    font-weight: bold; }
