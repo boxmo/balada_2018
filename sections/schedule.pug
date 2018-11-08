@@ -3,9 +3,21 @@ section#schedule.py-5
     .row.mb-5
       .col-12 
         h2.title PROGRAMAÇÃO – SÃO PAULO
-    .row.mb-5
+    .row
       .col-12
-        ul#schedule-day-nav.nav.nav-pills(role="tablist")
+        .d-sm-none.d-block.mb-5
+          label Escolha o dia 
+          select#schedule-select.form-control
+            option(value="#day1") 20/11 terça-feira
+            option(value="#day2") 21/11 quarta-feira
+            option(value="#day3") 22/11 quinta-feira
+            option(value="#day4") 23/11 sexta-feira
+            option(value="#day5") 24/11 sábado
+            option(value="#day6") 25/11 domingo
+            option(value="#ressaca") Ressaca
+            option(value="#extra") Especial
+          
+        ul#schedule-day-nav.nav.nav-pills.d-none.d-sm-flex.mb-5(role="tablist")
           li.nav-item
             a.nav-link.active(href="#day1" data-toggle="tab" data-day="20") 20/11 terça-feira
           li.nav-item 
@@ -25,6 +37,9 @@ section#schedule.py-5
     .row
       .col-12
         .tab-content
+          .d-sm-none.d-block
+            label Escolha o evento 
+
           #day1.tab-pane.fade.show.active(role="tabpanel")
             include schedule/day1
           #day2.tab-pane.fade(role="tabpanel")

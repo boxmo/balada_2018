@@ -33,6 +33,10 @@ nav.navbar
       color: $main-color
     &.active
       border-bottom: 2px solid $main-color
+  &.navbar-dark
+    .navbar-toggler
+      border-color: transparent
+
 .nav-pills
   .nav-item
     margin-right: 8px
@@ -77,6 +81,10 @@ nav.navbar
         background-color: $dark-grey
       &.active
         opacity: 1
+    @include media-breakpoint-down(sm)
+      margin-bottom: 20px
+      display: none
+
 
 #cover
   background-color: black
@@ -126,6 +134,10 @@ nav.navbar
 #schedule
   background-color: $light-grey
   color: #b3b3b3
+  select
+    background-color: $dark-grey
+    color: #b3b3b3
+    border-color: $main-color
 
 #places
   background-color: $light-grey
@@ -151,6 +163,7 @@ nav.navbar
           span.bar:after
             transform: rotate(90deg)
       &:hover
+        background-color: darken(#323232, 2%)
         text-decoration: none
     .card-body
       background-color: #1f1e25

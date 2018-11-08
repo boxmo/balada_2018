@@ -37,6 +37,41 @@ $('document').ready( () => {
     }, 500);
   });
 
+  $("#schedule-select").on("change", function(e) {
+    let href = $(this).val();
+    let target = $("#schedule").find(`[href='${href}']`);
+    $(target).click();
+  });
+
+  $(".nav-cust").each(function(){
+    var sel = $(this).prev(".form-control")
+    if(!sel.length){
+      const select = $("<select>").insertBefore($(this));
+      select.addClass("form-control mb-5 d-sm-none d-block");
+      $(this).find("a.nav-link").each(function(){
+        let value = $(this).attr("href");
+        let text  = $(this).text();
+        let option = $("<option>").attr("value", value).text(text)
+        select.append(option);
+      });
+      select.on("change", function(){
+        let value = $(this).val();
+        let btn = $(`a[href='${value}']`);
+        let target = $(value);
+        btn.click();
+        console.log(target.is(":visible"));
+        var checkExist = setInterval(function() {
+           if (target.is(":visible")) {
+             $([document.documentElement, document.body]).animate({
+               scrollTop: target.offset().top - 150
+             }, 500);
+              clearInterval(checkExist);
+           }
+        }, 100);
+      });
+    }
+  });
+
   //const monthDay = new Date().getDate();
   // const dayTrigger = $("#schedule-day-nav li").find(`[data-day="${monthDay}"]`);
   // console.log(dayTrigger);
