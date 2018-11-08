@@ -17405,6 +17405,40 @@ _jquery.default.fn.fullclip = _fullclip.default;
     (0, _jquery.default)([document.documentElement, document.body]).animate({
       scrollTop: (0, _jquery.default)(anchor).offset().top - 40
     }, 500);
+  });
+  (0, _jquery.default)("#schedule-select").on("change", function (e) {
+    var href = (0, _jquery.default)(this).val();
+    var target = (0, _jquery.default)("#schedule").find("[href='".concat(href, "']"));
+    (0, _jquery.default)(target).click();
+  });
+  (0, _jquery.default)(".nav-cust").each(function () {
+    var sel = (0, _jquery.default)(this).prev(".form-control");
+
+    if (!sel.length) {
+      var select = (0, _jquery.default)("<select>").insertBefore((0, _jquery.default)(this));
+      select.addClass("form-control mb-5 d-sm-none d-block");
+      (0, _jquery.default)(this).find("a.nav-link").each(function () {
+        var value = (0, _jquery.default)(this).attr("href");
+        var text = (0, _jquery.default)(this).text();
+        var option = (0, _jquery.default)("<option>").attr("value", value).text(text);
+        select.append(option);
+      });
+      select.on("change", function () {
+        var value = (0, _jquery.default)(this).val();
+        var btn = (0, _jquery.default)("a[href='".concat(value, "']"));
+        var target = (0, _jquery.default)(value);
+        btn.click();
+        console.log(target.is(":visible"));
+        var checkExist = setInterval(function () {
+          if (target.is(":visible")) {
+            (0, _jquery.default)([document.documentElement, document.body]).animate({
+              scrollTop: target.offset().top - 150
+            }, 500);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      });
+    }
   }); //const monthDay = new Date().getDate();
   // const dayTrigger = $("#schedule-day-nav li").find(`[data-day="${monthDay}"]`);
   // console.log(dayTrigger);
@@ -17436,7 +17470,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33781" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43439" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

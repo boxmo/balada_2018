@@ -6341,6 +6341,8 @@ nav.navbar {
       color: #c59a52; }
     nav.navbar a.active {
       border-bottom: 2px solid #c59a52; }
+  nav.navbar.navbar-dark .navbar-toggler {
+    border-color: transparent; }
 
 .nav-pills .nav-item {
   margin-right: 8px; }
@@ -6383,6 +6385,11 @@ nav.navbar {
     background-color: #1f1e25; }
   .nav.nav-cust .nav-link.active {
     opacity: 1; }
+
+@media (max-width: 767.98px) {
+  .nav.nav-cust {
+    margin-bottom: 20px;
+    display: none; } }
 
 #cover {
   background-color: black;
@@ -6434,6 +6441,10 @@ nav.navbar {
 #schedule {
   background-color: #323232;
   color: #b3b3b3; }
+  #schedule select {
+    background-color: #1f1e25;
+    color: #b3b3b3;
+    border-color: #c59a52; }
 
 #places {
   background-color: #323232;
@@ -6457,6 +6468,7 @@ nav.navbar {
       #places .card a.trigger.collapsed .card-header span.bar:after {
         transform: rotate(90deg); }
     #places .card a.trigger:hover {
+      background-color: #2d2d2d;
       text-decoration: none; }
     #places .card .card-body {
       background-color: #1f1e25; }
