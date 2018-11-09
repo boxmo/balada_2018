@@ -180,7 +180,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/capa_site_2.jpg":[["capa_site_2.fd41299c.jpg","assets/img/capa_site_2.jpg"],"assets/img/capa_site_2.jpg"],"./../img/equipe/1.jpg":[["1.67a70f4d.jpg","assets/img/equipe/1.jpg"],"assets/img/equipe/1.jpg"],"./../img/bgs/marcelino.jpg":[["marcelino.ffc62c1c.jpg","assets/img/bgs/marcelino.jpg"],"assets/img/bgs/marcelino.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/process/browser.js":[function(require,module,exports) {
+},{"./../img/capa_site.jpg":[["capa_site.f8895e13.jpg","assets/img/capa_site.jpg"],"assets/img/capa_site.jpg"],"./../img/capa_mobile.jpg":[["capa_mobile.66a69784.jpg","assets/img/capa_mobile.jpg"],"assets/img/capa_mobile.jpg"],"./../img/equipe/1.jpg":[["1.67a70f4d.jpg","assets/img/equipe/1.jpg"],"assets/img/equipe/1.jpg"],"./../img/bgs/marcelino.jpg":[["marcelino.ffc62c1c.jpg","assets/img/bgs/marcelino.jpg"],"assets/img/bgs/marcelino.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -17315,6 +17315,10 @@ module.exports = "/6.eb065be5.jpg";
 module.exports = "/7.6d3a9fce.jpg";
 },{}],"assets/img/bgs/8.jpg":[function(require,module,exports) {
 module.exports = "/8.db67e056.jpg";
+},{}],"assets/img/bgs/9.jpg":[function(require,module,exports) {
+module.exports = "/9.3f51dced.jpg";
+},{}],"assets/img/bgs/10.jpg":[function(require,module,exports) {
+module.exports = "/10.e00ae8c7.jpg";
 },{}],"assets/img/equipe.js":[function(require,module,exports) {
 "use strict";
 
@@ -17355,15 +17359,19 @@ var _14 = _interopRequireDefault(require("./bgs/7.jpg"));
 
 var _15 = _interopRequireDefault(require("./bgs/8.jpg"));
 
+var _16 = _interopRequireDefault(require("./bgs/9.jpg"));
+
+var _17 = _interopRequireDefault(require("./bgs/10.jpg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = {
   imgs: [_2.default, _.default, _8.default, _3.default, _4.default, _5.default, _6.default, _7.default],
-  firstBgs: [_marcelino.default, _9.default, _10.default, _11.default],
-  secondBgs: [_12.default, _13.default, _14.default, _15.default]
+  firstBgs: [_marcelino.default, _9.default, _10.default, _11.default, _16.default],
+  secondBgs: [_12.default, _13.default, _14.default, _15.default, _17.default]
 };
 exports.default = _default;
-},{"./equipe/1.jpg":"assets/img/equipe/1.jpg","./equipe/2.jpg":"assets/img/equipe/2.jpg","./equipe/3.jpg":"assets/img/equipe/3.jpg","./equipe/4.jpg":"assets/img/equipe/4.jpg","./equipe/5.jpg":"assets/img/equipe/5.jpg","./equipe/6.jpg":"assets/img/equipe/6.jpg","./equipe/7.jpg":"assets/img/equipe/7.jpg","./equipe/8.jpg":"assets/img/equipe/8.jpg","./bgs/marcelino.jpg":"assets/img/bgs/marcelino.jpg","./bgs/2.jpg":"assets/img/bgs/2.jpg","./bgs/3.jpg":"assets/img/bgs/3.jpg","./bgs/4.jpg":"assets/img/bgs/4.jpg","./bgs/5.jpg":"assets/img/bgs/5.jpg","./bgs/6.jpg":"assets/img/bgs/6.jpg","./bgs/7.jpg":"assets/img/bgs/7.jpg","./bgs/8.jpg":"assets/img/bgs/8.jpg"}],"index.js":[function(require,module,exports) {
+},{"./equipe/1.jpg":"assets/img/equipe/1.jpg","./equipe/2.jpg":"assets/img/equipe/2.jpg","./equipe/3.jpg":"assets/img/equipe/3.jpg","./equipe/4.jpg":"assets/img/equipe/4.jpg","./equipe/5.jpg":"assets/img/equipe/5.jpg","./equipe/6.jpg":"assets/img/equipe/6.jpg","./equipe/7.jpg":"assets/img/equipe/7.jpg","./equipe/8.jpg":"assets/img/equipe/8.jpg","./bgs/marcelino.jpg":"assets/img/bgs/marcelino.jpg","./bgs/2.jpg":"assets/img/bgs/2.jpg","./bgs/3.jpg":"assets/img/bgs/3.jpg","./bgs/4.jpg":"assets/img/bgs/4.jpg","./bgs/5.jpg":"assets/img/bgs/5.jpg","./bgs/6.jpg":"assets/img/bgs/6.jpg","./bgs/7.jpg":"assets/img/bgs/7.jpg","./bgs/8.jpg":"assets/img/bgs/8.jpg","./bgs/9.jpg":"assets/img/bgs/9.jpg","./bgs/10.jpg":"assets/img/bgs/10.jpg"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./assets/css/layout.sass");
@@ -17470,7 +17478,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43439" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36247" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

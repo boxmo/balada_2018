@@ -6393,10 +6393,15 @@ nav.navbar {
 
 #cover {
   background-color: black;
-  background-image: url("capa_site_2.fd41299c.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
+  @media (min-width: 576px) {
+    #cover {
+      background-image: url("capa_site.f8895e13.jpg"); } }
+  @media (max-width: 767.98px) {
+    #cover {
+      background-image: url("capa_mobile.66a69784.jpg"); } }
 
 #about {
   position: relative;
@@ -6437,6 +6442,9 @@ nav.navbar {
   #about .about-text {
     font-size: 15px;
     color: #b3b3b3; }
+    #about .about-text a {
+      color: #b3b3b3;
+      font-weight: bold; }
 
 #schedule {
   background-color: #323232;
