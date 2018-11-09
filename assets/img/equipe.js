@@ -15,9 +15,11 @@ import b5 from './bgs/5.jpg'
 import b6 from './bgs/6.jpg'
 import b7 from './bgs/7.jpg'
 import b8 from './bgs/8.jpg'
+import b9 from './bgs/9.jpg'
+import b10 from './bgs/10.jpg'
 
 export default {
   imgs: [p2, p1, p8, p3, p4, p5, p6, p7],
-  firstBgs: [b1, b2, b3, b4],
-  secondBgs: [b5, b6, b7, b8],
+  firstBgs: [b1, b2, b3, b4, b9],
+  secondBgs: [b5, b6, b7, b8, b10],
 }

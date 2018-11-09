@@ -88,10 +88,13 @@ nav.navbar
 
 #cover
   background-color: black
-  background-image: url("../img/capa_site_2.jpg")
   background-size: cover
   background-repeat: no-repeat
   height: 100vh
+  @include media-breakpoint-up(sm)
+    background-image: url("../img/capa_site.jpg")
+  @include media-breakpoint-down(sm)
+      background-image: url("../img/capa_mobile.jpg")
 
 #about
   position: relative
@@ -130,6 +133,9 @@ nav.navbar
   .about-text
     font-size: 15px
     color: #b3b3b3
+    a
+      color: #b3b3b3
+      font-weight: bold
 
 #schedule
   background-color: $light-grey

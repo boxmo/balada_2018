@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel index.pug --open",
-    "build": "parcel build index.pug"
+    "build": "parcel build index.pug",
+    "deploy": "cd dist && git add . && git commit -m 'deploy' && git push origin master"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
