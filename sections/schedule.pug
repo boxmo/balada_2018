@@ -2,36 +2,31 @@ section#schedule.py-5
   .container
     .row.mb-5
       .col-12 
-        h2.title PROGRAMAÇÃO – SÃO PAULO
+        h2.title.bg Programação – São Paulo
     .row
       .col-12
         .d-sm-none.d-block.mb-5
           label Escolha o dia 
-          select#schedule-select.form-control
-            option(value="#day1") 20/11 terça-feira
-            option(value="#day2") 21/11 quarta-feira
-            option(value="#day3") 22/11 quinta-feira
-            option(value="#day4") 23/11 sexta-feira
-            option(value="#day5") 24/11 sábado
-            option(value="#day6") 25/11 domingo
-            option(value="#ressaca") Ressaca
+          select.schedule-select.form-control
+            option(value="#day1") 04/09 quarta-feira
+            option(value="#day2") 05/09 quinta-feira
+            option(value="#day3") 06/09 sexta-feira
+            option(value="#day4") 07/09 sábado
+            option(value="#day5") 08/09 domingo
             option(value="#extra") Especial
           
         ul#schedule-day-nav.nav.nav-pills.d-none.d-sm-flex.mb-5(role="tablist")
           li.nav-item
-            a.nav-link.active(href="#day1" data-toggle="tab" data-day="20") 20/11 terça-feira
+            a.nav-link.active(href="#day1" data-toggle="tab" data-day="20") 04/09 quarta-feira
           li.nav-item 
-            a.nav-link(href="#day2" data-toggle="tab" data-day="21") 21/11 quarta-feira
+            a.nav-link(href="#day2" data-toggle="tab" data-day="21") 05/09 quinta-feira
           li.nav-item 
-            a.nav-link(href="#day3" data-toggle="tab" data-day="22") 22/11 quinta-feira
+            a.nav-link(href="#day3" data-toggle="tab" data-day="22") 06/09 sexta-feira
           li.nav-item 
-            a.nav-link(href="#day4" data-toggle="tab" data-day="23") 23/11 sexta-feira
+            a.nav-link(href="#day4" data-toggle="tab" data-day="23") 07/09 sábado 
           li.nav-item 
-            a.nav-link(href="#day5" data-toggle="tab" data-day="24") 24/11 sábado
+            a.nav-link(href="#day5" data-toggle="tab" data-day="24") 08/09 domingo
           li.nav-item 
-            a.nav-link(href="#day6" data-toggle="tab" data-day="25") 25/11 domingo
-          li.nav-item 
-            a.nav-link(href="#ressaca" data-toggle="tab" data-day="26") Ressaca 
           li.nav-item 
             a.nav-link(href="#extra" data-toggle="tab" data-day="27") Especial              
     .row
@@ -56,24 +51,87 @@ section#schedule.py-5
             include schedule/ressaca
           #extra.tab-pane.fade(role="tabpanel")
             include schedule/extra
-    hr.mt-4.mb-5(style="border-bottom:1px solid white;")
+    br 
+    br
     .row.mb-5
-      .col-md-4.col-12
-        h4.title.mb-3 PROGRAMAÇÃO – Teresina
-        a.btn.btn-primary.mb-4(href="assets/img/schedule/teresina_1.jpg" data-fancybox="teresina") Ver programação
-        a.d-none(href="assets/img/schedule/teresina_2.jpg" data-fancybox="teresina")
-
-      .col-md-4.col-12
-        h4.title.mb-3 PROGRAMAÇÃO – Salvador
-        a.btn.btn-primary.mb-4(href="assets/img/schedule/salvador/1.jpg" data-fancybox="salvador") Ver programação
-        a.d-none(href="assets/img/schedule/salvador/2.jpg" data-fancybox="salvador")
-        a.d-none(href="assets/img/schedule/salvador/3.jpg" data-fancybox="salvador")
-        a.d-none(href="assets/img/schedule/salvador/4.jpg" data-fancybox="salvador")
-        a.d-none(href="assets/img/schedule/salvador/5.jpg" data-fancybox="salvador")
-        a.d-none(href="assets/img/schedule/salvador/6.jpg" data-fancybox="salvador")
-        a.d-none(href="assets/img/schedule/salvador/7.jpg" data-fancybox="salvador")
-        a.d-none(href="assets/img/schedule/salvador/8.jpg" data-fancybox="salvador")
+      .col-12 
+        h2.title.bg Programação – Salvador
+        b.text-sans.text-blue.text-sm 
+          | Homenageada: DONA CICI
+    .row
+      .col-12
+        .d-sm-none.d-block.mb-5
+          label Escolha o dia 
+          select.schedule-select.form-control
+            option(value="#sday1") 21/08 quarta-feira
+            option(value="#sday2") 22/08 quinta-feira
+            option(value="#sday3") 23/08 sexta-feira
+            option(value="#sday4") 24/08 sábado
+            option(value="#sday5") 25/08 domingo
         
-      .col-md-4.col-12
-        h4.title.mb-3 Amazon Kindle Direct Publishing
-        a.btn.btn-primary.mb-4(href="assets/img/schedule/kindle.jpg" data-fancybox="kindle") Ver programação
+        ul#schedule-day-nav.nav.nav-pills.d-none.d-sm-flex.mb-5(role="tablist")
+          li.nav-item
+            a.nav-link.active(href="#sday1" data-toggle="tab" data-day="20") 21/08 quarta-feira
+          li.nav-item 
+            a.nav-link(href="#sday2" data-toggle="tab" data-day="20") 22/08 quinta-feira
+          li.nav-item 
+            a.nav-link(href="#sday3" data-toggle="tab" data-day="20") 23/08 sexta-feira
+          li.nav-item 
+            a.nav-link(href="#sday4" data-toggle="tab" data-day="20") 24/08 sábado
+          li.nav-item 
+            a.nav-link(href="#sday5" data-toggle="tab" data-day="20") 25/08 domingo
+
+    .row.mb-5
+      .col-12
+        .tab-content
+          .d-sm-none.d-block
+            label Escolha o evento 
+
+          #sday1.tab-pane.fade.show.active(role="tabpanel")
+            include schedule/salvador/day1
+          #sday2.tab-pane.fade.show(role="tabpanel")
+            include schedule/salvador/day2
+          #sday3.tab-pane.fade.show(role="tabpanel")
+            include schedule/salvador/day3
+          #sday4.tab-pane.fade.show(role="tabpanel")
+            include schedule/salvador/day4
+          #sday5.tab-pane.fade.show(role="tabpanel")
+            include schedule/salvador/day5
+
+
+    .row.mb-5
+      .col-12 
+        h2.title.bg Programação – Teresina        
+        b.text-sans.text-blue.text-sm 
+          | Homenageado: ELIO FERREIRA
+    .row
+      .col-12
+        .d-sm-none.d-block.mb-5
+          label Escolha o dia 
+          select.schedule-select.form-control
+            option(value="#tday1") 27/08 terça-feira
+            option(value="#tday2") 28/08 quarta-feira
+            option(value="#tday3") LANÇAMENTOS DE LIVROS
+
+        
+        ul#schedule-day-nav.nav.nav-pills.d-none.d-sm-flex.mb-5(role="tablist")
+          li.nav-item
+            a.nav-link.active(href="#tday1" data-toggle="tab" data-day="20") 27/08 terça-feira
+          li.nav-item
+            a.nav-link(href="#tday2" data-toggle="tab" data-day="20") 28/08 quarta-feira
+          li.nav-item
+            a.nav-link(href="#tday3" data-toggle="tab" data-day="20") LANÇAMENTOS DE LIVROS
+
+    .row.mb-5
+      .col-12
+        .tab-content
+          .d-sm-none.d-block
+            label Escolha o evento 
+          #tday1.tab-pane.fade.show.active(role="tabpanel")
+            include schedule/teresina/day1
+          #tday2.tab-pane.fade.show(role="tabpanel")
+            include schedule/teresina/day2
+          #tday3.tab-pane.fade.show(role="tabpanel")
+            include schedule/teresina/day3
+
+

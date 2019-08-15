@@ -1,38 +1,101 @@
 @import ../../node_modules/bootstrap/scss/bootstrap.scss
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap')
 
 $main-color: #c59a52
 $dark-grey: #1f1e25
 $light-grey: #323232
 
+$white: #ffffff
+$blue: #005089
+$yellow: #ede937
+$red: #da1e48
+$sans: 'Open Sans', sans-serif
+$fancy: 'Gochi Hand', cursive
+
 body
-  font-family: 'Open Sans', sans-serif
+  font-family: $sans
+  background-color: $white
+  background-image: url("../img/caderno.jpg")
+  background-position: center center
+  background-repeat: repeat
+
 
 h1,h2,h3,h4,h5,h6
-  font-family: 'Oswald', sans-serif
-  color: $main-color
+  font-family: $fancy
+  color: $red
   &.title
-    text-transform: uppercase
+    text-transform: capitalize
     font-weight: 300
+    @include media-breakpoint-down(sm)
+      font-size: 24px
+    
   .text-small
     font-size: 14px
-    color: #b3b3b3
+    color: #005089
     margin-top: 5px
     text-transform: none
+  &.bg
+    padding-left: 10px
+    line-height: 55px
+    background: url("../img/mancha.png  ") no-repeat left center transparent
+    @include media-breakpoint-down(sm)
+      background: url("../img/mancha-pequena.png  ") no-repeat left center transparent
+  &.bg-large
+    padding-left: 10px
+    line-height: 55px
+    background: url("../img/mancha-large.png  ") no-repeat left center transparent
+  &.bg-sm
+    padding-left: 10px
+    line-height: 55px
+    background: url("../img/mancha-pequena.png  ") no-repeat left center transparent
+  &.bg-xs
+    padding-left: 10px
+    line-height: 55px
+    background: url("../img/mancha-xs.png  ") no-repeat left center transparent
 
 .text-shadow
   text-shadow: 1px 1px 2px rgba(0,0,0,.8)
 
+.text-blue
+  color: $blue
+.text-yellow
+  color: $yellow
+.text-red
+  color: $red
+.bg-blue
+  background-color: $blue
+  color: $white
+.bg-yellow
+  background-color: $yellow
+.bg-red 
+  background-color: $red
+
+.text-small
+    font-size: 12px
+.text-fancy
+  font-family: $fancy !important
+.text-sans
+  font-family: $sans !important
+
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link
+  color: $blue
+  &:hover
+    color: darken($blue, 15% )
 nav.navbar
-  background-color: rgba(0,0,0,.6)
+  background-color: rgba(255,255,255,.9)
   padding: 0 1rem
+  box-shadow: 3px 6px 10px rgba(133,133,133,.3)
   a
-    color: #b3b3b3
+    color: $blue
     &.navbar-brand
+      font-family: 'Gochi Hand', cursive
       text-transform: uppercase
-      font-family: 'Oswald', sans-serif
-      color: $main-color
+      color: $blue
+      &:hover
+        color: black
     &.active
-      border-bottom: 2px solid $main-color
+      border-bottom: 2px solid $blue
   &.navbar-dark
     .navbar-toggler
       border-color: transparent
@@ -43,43 +106,48 @@ nav.navbar
     &:last-child
       margin-right: 0
   .nav-link
-    border-radius: 50px
-    color: white
-    border: 2px solid white
+    border-radius: 4px
+    color: $blue
+    border: 2px solid $blue
     font-weight: 400
     font-size: 14px
+    font-weight: bold
     &.active, &:hover
-      background-color: $main-color
-      border-color: $main-color
+      background-color: $blue
+      border-color: $blue
+      color: $yellow
     &.extra
       padding: 8px 50px
 
 .btn
   &.btn-primary
     background-color: transparent
-    color: white
-    border-radius: 50px
-    border: 2px solid white
+    color: $blue
+    border-radius: 4px
+    border: 2px solid $blue
     font-weight: 400
     font-size: 14px
     &:hover
-      background-color: $main-color
-      border-color: $main-color
+      background-color: $blue
+      border-color: $blue
+      color: $yellow
 
 .nav
   &.nav-cust
     .nav-link
+      border-radius: 4px
       min-height: 48px
-      color: white
-      border-left: 4px solid #8C8C8C
+      color: $blue
+      background-color: transparent      
+      border: 2px solid $blue
       margin-bottom: 15px
-      opacity: .6
+      opacity: 1
       transition: all .3s
       font-size: 14px
-      &.active, &:hover
-        border-left: 4px solid $main-color
-        background-color: $dark-grey
+      font-weight: bold
       &.active
+        background-color: $blue
+        color: $yellow
         opacity: 1
     @include media-breakpoint-down(sm)
       margin-bottom: 20px
@@ -87,24 +155,24 @@ nav.navbar
 
 
 #cover
-  background-color: black
-  background-size: cover
+  // background-color: $white
   background-repeat: no-repeat
   height: 100vh
+  background-size: cover
   @include media-breakpoint-up(sm)
-    background-image: url("../img/capa_site.jpg")
+    background-image: url("../img/capa_site_opt.jpg")
   @include media-breakpoint-down(sm)
       background-image: url("../img/capa_mobile.jpg")
-
+  @media (min-aspect-ratio: 2/1) 
+    background-size: initial
+    background-position: center center
 #about
   position: relative
-  color: white
   .bg-left
     position: absolute
     left: 0
     top: 0
     z-index: -10
-    background-color: $dark-grey
     width: 50%
     height: 100%
     @include media-breakpoint-down(sm)
@@ -116,10 +184,8 @@ nav.navbar
     z-index: -10
     width: 50%
     height: 100%
-    background-image: url("../img/equipe/1.jpg")
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center center
+    background-color: $red
+    color: $white
     .overlay
       position: absolute
       top: 0
@@ -132,47 +198,61 @@ nav.navbar
       width: 0%
   .about-text
     font-size: 15px
-    color: #b3b3b3
+    color: $blue
     a
-      color: #b3b3b3
+      color: darken($blue, 10%)
       font-weight: bold
-
+  .team 
+    color: $white
+    font-size: 15px
+    strong
+      color: $yellow
+      text-transform: uppercase
+      font-size: 13px
+      font-weight: bolder
 #schedule
-  background-color: $light-grey
-  color: #b3b3b3
+  // background-color: $white
+  // background-image: url("../img/caderno.jpg")
+  // background-position: center center
+  // background-repeat: repeat
+  color: $blue
   select
-    background-color: $dark-grey
-    color: #b3b3b3
-    border-color: $main-color
-
+    background-color: $blue
+    color: $white
+    border-color: $blue
+  h5
+    font-size: 1.5rem
+    font-family: $sans
+    font-weight: bold
 #places
-  background-color: $light-grey
-  color: #b3b3b3
+  background-color: $red
+  color: white
   .card
     background-color: transparent
     border: none
     a.trigger
       .card-header
         padding: 23px 15px
-        border-radius: 0
+        border-radius: 4px 4px 0 0 
         border: none
-        background-color: #1f1e25
+        background-color: darken($red, 5%)
         transition: all .4s
         h5
-          color: #b3b3b3
+          color: $white
+          font-family: $sans
       &.collapsed
         .card-header
-          border-bottom: 1px solid #454549
           background-color: transparent
           span.bar, span.bar:after
-            border-color: #75767F
+            border-color: white
           span.bar:after
             transform: rotate(90deg)
       &:hover
-        background-color: darken(#323232, 2%)
+        background-color: darken($red, 5%)
         text-decoration: none
     .card-body
-      background-color: #1f1e25
+      background-color: darken($red, 5%)
+      border-radius: 4px
       a
         color: white
 
@@ -181,7 +261,7 @@ nav.navbar
     margin-top: 15px
     margin-right: 30px
   span.bar, span.bar:after
-    border-color: $main-color
+    border-color: white
     border-width: 1px
     border-style: solid
     width: 21px
@@ -198,12 +278,12 @@ nav.navbar
     left: 15px
 
 #social
-  background-color: $dark-grey
+  background-color: $blue
   color: white
   .nav
     i
-      background-color: #252321
-      color: white
+      background-color: $white
+      color: $blue
       font-size: 20px
       padding: 10px
       margin-right: 10px
@@ -212,7 +292,7 @@ nav.navbar
         padding: 10px 14px
     a.nav-link
       padding-left: 0
-      color: #b3b3b3
+      color: white
   .video-wraper
     overflow: hidden
     padding-bottom: 56.25%
@@ -225,13 +305,35 @@ nav.navbar
       width: 100%
       position: absolute
 #divider1
-  background-image: url('../img/bgs/marcelino.jpg')
-#divider2
-  background-image: url('../img/bgs/marcelino.jpg')
+  background-color: $blue
+  color: white
+  h1 
+    color: $yellow
+    .text-small
+      color: white
+      font-family: $sans
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 12px
 
+#divider2
+  h1
+    color: $red
+    .text-small
+      font-size: 12px
+      font-family: $sans
+      color: $blue
+      text-transform: uppercase
+      font-weight: bold
+  .carousel-indicators 
+    li
+      background-color: $blue
+      opacity: .5
+      &.active
+        opacity: 1
 #divider1, #divider2
   position: relative
-  height: 500px
+  height: 400px
   background-repeat: no-repeat
   background-size: cover
   background-position: center center
@@ -241,7 +343,7 @@ nav.navbar
     font-style: italic
     .text-small
       font-style: normal
-      font-size: 20px
+      font-size: 16px
   .overlay
     position: absolute
     top: 0
@@ -249,12 +351,17 @@ nav.navbar
     width: 100%
     height: 100%
     background-color: rgba(0,0,0,.8)
+  @include media-breakpoint-down(sm)
+    height: 600px
 
+#logos 
+  background-color: white
 #credit
-  background-color: $dark-grey
-  color: white
+  background-color: $white
+  color: black
   font-size: 14px
   padding: 10px 0
   a
-    color: white
+    color: black
     font-weight: bold
+
